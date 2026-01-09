@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kassa Utama</title>
+    <!-- Link for CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Link for Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Link for Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body>
+    <header >
+        <nav class="navbar container">
+            <a href="#" class="nav-logo">
+                <img src="images/logo2.png" alt="Logo" class="logo-image">
+                <h2 class="logo-text">Kassa utama</h2>
+            </a>
+
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <button id="nav-close-button"><i class="fa-solid fa-x"></i></button>
+                </li>
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#product" class="nav-link">Product</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#cart" class="nav-link count" id="cart-link">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="cart-badge hidden">1</span>
+                    </a>
+                </li>                
+                <li class="nav-item">
+                    <a href="/login.html" class="nav-link"><i class="fa-solid fa-user"></i></a>
+                </li>
+            </ul>
+            <button id="nav-open-button"><i class="fa-solid fa-bars"></i></button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Section Home -->
+        <section class="home-section" id="home">
+                <div class="section-content container">
+                    <div class="teks-hero">
+                        <h2>Bakery and Cake</h2>
+                        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias quos neque nulla vitae asperiores architecto dolores pariatur dolorem quae cum natus commodi, voluptas, est beatae rem? Sit blanditiis at quia.</p>
+                    </div>
+                    <div class="image-wrapper">
+                        <img src="images/logo-hero.png" alt="gambar" >
+                    </div>
+        </section>
+
+        <!-- Section About-->
+        <section class="about-section" id="about">
+            <div class="section-content container">
+                <div class="image-wrapper">
+                    <img src="/images/owner-photo.jpg" alt="story">
+                </div>
+                <div class="about-teks">
+                    <h2 class="title">ABOUT US</h2>
+                    <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis mollitia deserunt odit quia officia porro eaque maiores consequuntur ut iusto, exercitationem dolores doloremque, corrupti, nostrum ipsam rem necessitatibus. Unde, maxime?</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Product -->
+        <section class="product-section" id="product">
+            <div class="card container">
+                <h2 class="title">OUR PRODUCT</h2>
+                <ul class="content">
+                    <!-- data product di render disini -->
+                </ul>
+            </div>
+        </section>
+
+        <!-- Section Footer -->
+        <footer class="footer-section">
+            <div class="section-content">
+                <p class="copyright-text">&copy; 2025 Bakery & cake. All rights reserved</p>
+                
+                <div class="social-link-list">
+                    <a href="" class="social-link"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="" class="social-link"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+
+                <p class="policy-text">
+                    <a href="" class="policy-link">Privacy policy</a>
+                    <span class="separator">&bull;</span>
+                    <a href="" class="policy-link">Refund policy</a>
+                </p>
+            </div>
+        </footer>
+
+        <!-- Display Cart-page -->
+        <section id="cart" class="cart-page">
+            <div class="cart-header">
+                <button class="close-cart"><i class="fa-solid fa-x"></i></button>
+                <h2 class="title">YOUR ITEM</h2>
+            </div>
+            <div class="section-content">
+                <ul class="content" id="cart-list">
+                    <!-- Item akan dirender di sini dari backend -->
+                </ul>
+            </div>
+        </section>
+    </main>
+
+
+    <script type="module" src="/js/main.js"></script>
+</body>
+</html>

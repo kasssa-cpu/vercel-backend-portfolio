@@ -1,3 +1,8 @@
+const API_BASE_URL = 
+    window.location.hostname === 'localhost' 
+        ? 'http://localhost:3000'
+        : 'https://new-portofolio-project.vercel.app';
+
 // cart.js
 export default async function initialCart(addCartButtons) {
     const displayCart = document.querySelector('#cart-link');
@@ -8,7 +13,9 @@ export default async function initialCart(addCartButtons) {
     let cart = {};
 
     // Fetch produk
-    const res = await fetch('https://new-portofolio-project.vercel.app/api/products');
+
+    // const res = await fetch('https://new-portofolio-project.vercel.app/api/products');
+    const res = await fetch(`${API_BASE_URL}/api/products`)
     const products = await res.json();
 
     // Toggle cart

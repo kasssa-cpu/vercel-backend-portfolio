@@ -1,10 +1,16 @@
+const API_BASE_URL = 
+    window.location.hostname === 'localhost' 
+        ? 'http://localhost:3000'
+        : 'https://new-portofolio-project.vercel.app';
+        
+
 export default async function renderProduct() {
     const productList = document.querySelector('.content');
     productList.innerHTML = "";
 
     try{
         // fetch data dari backend
-        const res = await fetch('https://new-portofolio-project.vercel.app/api/products');
+        const res = await fetch(`${API_BASE_URL}/api/products`);
         const products = await res.json();
         console.log(res)
     

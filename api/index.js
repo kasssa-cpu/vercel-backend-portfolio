@@ -7,6 +7,7 @@ const errorHandler = require('../middlewares/errorHandler');
 const app = express();
 
 app.use(express.json());
+app.use(cors({ origin: '*' }));
 // app.use(express.static('public'));
 // API routes
 app.use('/api', productRoutes);
